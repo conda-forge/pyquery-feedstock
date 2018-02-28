@@ -1,7 +1,7 @@
 {% set name = "pyquery" %}
-{% set version = "1.2.17" %}
+{% set version = "1.4.0" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "6aa0133b30d9a0229ad65d3a7708c4e853bf46808fb359d06ca56f5039102af6" %}
+{% set hash_value = "4771db76bd14352eba006463656aef990a0147a0eeaf094725097acfa90442bf" %}
 
 package:
   name: {{ name|lower }}
