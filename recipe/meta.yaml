@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://github.com/gawel/pyquery
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: A jquery-like library for python
