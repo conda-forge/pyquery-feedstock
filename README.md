@@ -3,11 +3,15 @@ About pyquery
 
 Home: https://github.com/gawel/pyquery
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyquery-feedstock/blob/master/LICENSE.txt)
 
 Summary: A jquery-like library for python
+
+Development: https://github.com/gawel/pyquery
+
+Documentation: http://pyquery.rtfd.org
 
 pyquery allows you to make jquery queries on xml documents. The API is as
 much as possible the similar to jquery. pyquery uses lxml for fast xml
@@ -70,7 +74,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
