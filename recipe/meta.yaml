@@ -1,5 +1,5 @@
 {% set name = "pyquery" %}
-{% set version = "1.4.3" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,21 +8,21 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a388eefb6bc4a55350de0316fbd97cda999ae669b6743ae5b99102ba54f5aa72
+  sha256: 963e8d4e90262ff6d8dec072ea97285dc374a2f69cad7776f4082abcf6a1d8ae
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
   run:
-    - python >=3.5
+    - python >=3.7
     - lxml >=2.1
-    - cssselect >0.7.9
+    - cssselect >=1.2.0
 
 test:
   imports:
