@@ -7,25 +7,27 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0194bb2706b12d037db12c51928fe9ebb36b72d9e719565daba5a6c595322faf
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - lxml >=2.1
     - cssselect >=1.2.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyquery
 
