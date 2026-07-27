@@ -1,5 +1,5 @@
 {% set name = "pyquery" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0194bb2706b12d037db12c51928fe9ebb36b72d9e719565daba5a6c595322faf
+  sha256: a17b5e0b22810fccf264795c4671fd67dfb27a697a4ecf627cdbbddbcf93a7fb
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
