@@ -1,22 +1,20 @@
 schema_version: 1
 
 context:
-  name: pyquery
-  version: "2.0.1"
+  version: 2.1.0
 
 package:
-  name: ${{ name|lower }}
+  name: pyquery
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 0194bb2706b12d037db12c51928fe9ebb36b72d9e719565daba5a6c595322faf
-  file_name: ${{ name }}-${{ version }}.tar.gz
+- url: https://files.pythonhosted.org/packages/source/p/pyquery/pyquery-${{ version }}.tar.gz
+  sha256: 75238388750fc6e254b7a52f771027b9beb3a6202b88048bef52a00b0abeadbb
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
